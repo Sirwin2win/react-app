@@ -1,6 +1,9 @@
 import React from 'react'
 import Demo from './components/Demo'
 import Spread from './components/Spread'
+import Home from './pages/Home'
+import Thursday from './components/Thursday'
+
 
 
 
@@ -87,9 +90,11 @@ const tilapia = new Fish("Tilapia",2,0,'scale')
 
   return (
     <>
+     <Home />
+    <Thursday />
     <Spread />
     <Demo />
-    
+   
     <div>
       <h1>Hello World</h1>
       <h1>{lion.getName()}</h1>
