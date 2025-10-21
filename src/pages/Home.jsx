@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from './myStyle.module.css'
 
 const Home = () => {
     /*
@@ -20,7 +21,8 @@ const Home = () => {
     */
   return (
     <div>
-      <h1>Hello Home Page</h1>
+      <h1 className='text-danger'>Hello Home Page</h1>
+      <p className={styles.k1}>Paragraph</p>
     </div>
   )
 }
