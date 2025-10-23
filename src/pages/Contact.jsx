@@ -1,4 +1,5 @@
 import React from 'react'
+import Properties from '../components/Properties'
 
 const Contact = () => {
     const styles = {
@@ -10,6 +11,7 @@ const Contact = () => {
   return (
     <div>
         <p style={styles}>Contact Us Page</p>
+        <Properties name="Peter Doe" email="peterdoe@gmail.com" age={30} />
     </div>
   )
 }

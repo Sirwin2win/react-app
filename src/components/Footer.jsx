@@ -1,6 +1,8 @@
 import React from 'react'
 import logo from '../assets/images/logo.jpg'
 import { FaFacebook,FaTwitter, FaInstagram, FaLinkedin  } from "react-icons/fa6";
+import { Link } from 'react-router-dom';
+import './styles.css'
 
 const Footer = () => {
   return (
@@ -21,27 +23,58 @@ const Footer = () => {
       <h1 className='text-end text-light'>Right</h1>
       <h1 className='text-uppercase text-light'>Capitalize</h1>
       <h1 className='text-lowercase text-light'>Lower</h1> */}
-      <div className="row container p-5">
+      <div className="row container p-5 mx-auto">
         {/* First Footer Column Started */}
         <div className="col-sm-3">
             <div className="row">
                 <img className='col-sm-3' src={logo} alt='Logo' style={{height:'50px'}} />
-            <h5 className='text-light col-sm-6 pt-2'>BuywaterH2o</h5>
+            <h5 className='colo col-sm-6 pt-2'>BuywaterH2o</h5>
             </div>
-            <p className='text-light'>Healthy living begins with healthy water consumption</p>
+            <p className='colo'>Healthy living begins with healthy water consumption</p>
             <div className="row">
-                <div className="col-sm-3"><FaFacebook className='text-light' size={25} /></div>
-                <div className="col-sm-3"><FaTwitter className='text-light' size={25}  /></div>
-                <div className="col-sm-3"><FaInstagram  className='text-light' size={25}  /></div>
-                <div className="col-sm-3"><FaLinkedin   className='text-light' size={25}  /></div>
+                <div className="col-sm-3"><FaFacebook className='colo' size={25} /></div>
+                <div className="col-sm-3"><FaTwitter className='colo' size={25}  /></div>
+                <div className="col-sm-3"><FaInstagram  className='colo' size={25}  /></div>
+                <div className="col-sm-3"><FaLinkedin   className='colo' size={25}  /></div>
             </div>
         </div>
             {/* First Footer Column Ended */}
             {/* Second Footer Column Started */}
             <div className="col-sm-3">
-                
+              <h5 className='colo'>Quick Links</h5> 
+         
+                <li><Link className='quick' to={'/'}>Home</Link></li>
+                <li><Link className='quick' to={'/about'}>About</Link></li>
+                <li><Link className='quick' to={'/contact'}>Contact</Link></li>
+                <li><Link className='quick' to={'/product'}>Product</Link></li>
+                <li><Link className='quick' to={'/blog'}>Blog</Link></li>
+           
             </div>
             {/* Second Footer Column Ended */}
+            {/* Third Footer Column Started */}
+                 <div className="col-sm-3">
+              <h5 className='colo '>Contact Us</h5> 
+         
+                <li><Link className='quick' to={'#'}>Plot E10 Ogbai Crescent</Link></li>
+                <li><Link className='quick' to={'#'}>Phase 4, After Kings Care Hospital,</Link></li>
+                <li><Link className='quick' to={'#'}>Kubwa, Abuja-FCT</Link></li>
+                <li><Link className='quick' to={'#'}>08027000043</Link></li>
+                {/* <li><Link className='quick' to={'/blog'}>Blog</Link></li> */}
+           
+            </div>
+            {/* Third Footer Column Ended */}
+            {/* Third Footer Column Started */}
+                 <div className="col-sm-3">
+              {/* <h5 className='colo'>Contact Us</h5>  */}
+         
+                <li><Link className='quick' to={'#'}>Plot E10 Ogbai Crescent</Link></li>
+                <li><Link className='quick' to={'#'}>Phase 4, After Kings Care Hospital,</Link></li>
+                <li><Link className='quick' to={'#'}>Kubwa, Abuja-FCT</Link></li>
+                <li><Link className='quick' to={'#'}>08027000043</Link></li>
+                {/* <li><Link className='quick' to={'/blog'}>Blog</Link></li> */}
+           
+            </div>
+            {/* Third Footer Column Ended */}
       </div>
     </div>
   )

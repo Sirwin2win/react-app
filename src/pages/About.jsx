@@ -2,16 +2,28 @@ import React from 'react'
 
 const About = () => {
 // const car = {color:'red',fontSize:'30px'}
+/*
+REACT EVENT HANDLER
+An event is an reaction in our software caused by an 
+action by a user e.g click, mouseover, keydown etc
+Usually, when a user click a button that has a function attached to, the function
+is called. That function is called an event handler
+*/
+const greet = function(){
+  alert("Good day, Sir")
+}
+const details = function(e){
+  console.log(e.target.value)
+}
+const square = function(n){
+  alert(n**2)
+}
   return (
     <div >
-      <div className="row">
-        <div className="col-sm-4">First Element</div>
-        <div className="col-sm-4">Second Element</div>
-        <div className="col-sm-4">Third Element</div>
-        <div className="col-sm-3">Forth Element</div>
-        <div className="col-sm-7">Fifth Element</div>
-        <div className="col-sm-2">Sixth Element</div>
-      </div>
+  <button onClick={greet}>Click me!</button>
+  <br />
+  <button onClick={details} value='5'>Click me!</button>
+  <button onClick={()=>square(6)} value='5'>Click Square!</button>
     </div>
   )
 }

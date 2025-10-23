@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './myStyle.module.css'
 
-const Home = () => {
+const Home = (props) => {
     /*
     ASSIGNMENT FOR TODAY 10/16/2025
     1. Write an array of numbers from 11 to 20(included)
@@ -22,7 +22,7 @@ const Home = () => {
   return (
     <div>
       <h1 className='text-danger'>Hello Home Page</h1>
-      <p className={styles.k1}>Paragraph</p>
+      <p className={styles.k1}>Paragraph {props.name}</p>
     </div>
   )
 }
