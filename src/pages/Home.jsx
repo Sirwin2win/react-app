@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './myStyle.module.css'
+import Tables from '../components/Tables'
 
 const Home = (props) => {
     /*
@@ -21,6 +22,7 @@ const Home = (props) => {
     */
   return (
     <div>
+      <Tables />
       <h1 className='text-danger'>Hello Home Page</h1>
       <p className={styles.k1}>Paragraph {props.name}</p>
     </div>
