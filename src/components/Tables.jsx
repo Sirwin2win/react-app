@@ -28,8 +28,28 @@ car.year
         favColor:''
     })
 
+    const [car, setCar] = useState({
+      name:"Toyota",
+      year:2025
+    })
+
+    const changeName = function(){
+      setCar((prevCar)=>{
+        return {...prevCar, name:"Hunda"}
+      })
+    }
+    const changeYear = function(){
+      setCar((prevCar)=>{
+        return {...prevCar, year:2026}
+      })
+    }
+
   return (
     <div className='container'>
+      <h1>{car.name}</h1>
+      <h1>{car.year}</h1>
+      <button onClick={changeName}>Change Car Name</button>
+      <button onClick={changeYear}>Change Car Year</button>
         <h1 style={{color:colo}}>{colo}</h1>
         <h1 style={{color:colo}}>{name}</h1>
         <h1 style={{color:colo}}>{stud.matNo}</h1>

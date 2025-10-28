@@ -7,6 +7,8 @@ import Contact from './pages/Contact'
 import Products from './pages/Products'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Blog from './pages/Blog'
+import RealProductPage from './pages/RealProductPage'
+import ProdDetail from './components/ProdDetail'
 
 const App = () => {
   return (
@@ -16,8 +18,10 @@ const App = () => {
       <Route index element={<Home name="Mary Doe" />} />
       <Route path={'/about'} element={<About />} />
       <Route path={'/contact'} element={<Contact />} />
-      <Route path={'/product'} element={<Products />} />
+      {/* <Route path={'/product'} element={<Products />} /> */}
       <Route path={'/blog'} element={<Blog />} />
+      <Route path='/product' element={<RealProductPage />} />
+      <Route path='/product/:id' element={<ProdDetail />} />
       </Route>
     </Routes>
     </BrowserRouter>

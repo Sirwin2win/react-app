@@ -1,5 +1,7 @@
 import React from 'react'
 import Properties from '../components/Properties'
+import Form from '../components/Form'
+import MultipleForm from '../components/MultipleForm'
 
 const Contact = () => {
     const styles = {
@@ -10,6 +12,8 @@ const Contact = () => {
     }
   return (
     <div>
+      {/* <Form /> */}
+      <MultipleForm />
         <p style={styles}>Contact Us Page</p>
         <Properties name="Peter Doe" email="peterdoe@gmail.com" age={30} />
     </div>
