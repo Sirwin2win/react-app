@@ -6,9 +6,12 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import Products from './pages/Products'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import Blog from './pages/Blog'
 import RealProductPage from './pages/RealProductPage'
 import ProdDetail from './components/ProdDetail'
+import New from './pages/New'
+import NewDetail from './components/NewDetail'
 
 const App = () => {
   return (
@@ -22,6 +25,8 @@ const App = () => {
       <Route path={'/blog'} element={<Blog />} />
       <Route path='/product' element={<RealProductPage />} />
       <Route path='/product/:id' element={<ProdDetail />} />
+      <Route path='/new' element={<New />} />
+      <Route path='/new/:id' element={<NewDetail />} />
       </Route>
     </Routes>
     </BrowserRouter>

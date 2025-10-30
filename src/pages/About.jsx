@@ -1,4 +1,5 @@
 import React from 'react'
+import laptop5 from '../assets/images/laptop5.avif'
 
 const About = () => {
 // const car = {color:'red',fontSize:'30px'}
@@ -19,12 +20,15 @@ const square = function(n){
   alert(n**2)
 }
   return (
-    <div >
+ <div>
+  <div style={{height:'300px', width:'100%',backgroundImage:`url(${laptop5})`}}></div>
+     <div >
   <button onClick={greet}>Click me!</button>
   <br />
   <button onClick={details} value='5'>Click me!</button>
   <button onClick={()=>square(6)} value='5'>Click Square!</button>
     </div>
+ </div>
   )
 }
 
