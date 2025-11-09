@@ -1,8 +1,12 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../assets/images/logo.jpg'
+import ThemeContext from '../ThemeContext'
+
 
 const Header = () => {
+
+  // const {theme, toggleTheme} = useContext(ThemeContext)
 
     const myStyle = {
         color:"white",
@@ -10,8 +14,11 @@ const Header = () => {
         fontWeight:900
     }
   return (
-   
-      <nav className="navbar navbar-expand-lg bg-primary">
+  //  <div style={{backgroundColor:theme}}>
+
+
+      <nav  className="navbar navbar-expand-lg bg-primary">
+        {/* <button onClick={toggleTheme}>Change Theme</button> */}
   <div className="container-fluid">
     <Link className="navbar-brand" to={'/'}><img style={{height:'50px'}} className='rounded-circle' src={logo} alt='' /></Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,7 +63,7 @@ const Header = () => {
     </div>
   </div>
 </nav>
-   
+      // </div>
   )
 }
 

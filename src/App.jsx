@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Layout from './pages/Layout'
 import Home from './pages/Home'
@@ -12,9 +12,18 @@ import RealProductPage from './pages/RealProductPage'
 import ProdDetail from './components/ProdDetail'
 import New from './pages/New'
 import NewDetail from './components/NewDetail'
+import ThemeContext from './ThemeContext'
+
 
 const App = () => {
+  const [theme, setTheme] = useState('white')
+  const toggleTheme = function(){
+    setTheme((prev)=> {
+      return theme=='white'?'black':'white'
+    })
+  }
   return (
+    <ThemeContext.Provider value={{theme,toggleTheme}}>
     <BrowserRouter>
     <Routes>
       <Route path={'/'} element={<Layout />}>
@@ -30,6 +39,7 @@ const App = () => {
       </Route>
     </Routes>
     </BrowserRouter>
+    </ThemeContext.Provider>
   )
 }
 
