@@ -52,8 +52,6 @@ const handleFocus = function(){
   <button onClick={details} value='5'>Click me!</button>
   <button onClick={()=>square(6)} value='5'>Click Square!</button>
     </div> */}
-    <label htmlFor='name'>Name : </label>
-    <input type='text' id='name' />
  </div>
   )
 }

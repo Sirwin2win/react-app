@@ -18,6 +18,15 @@ const ReducingHook = () => {
         }
      }
     /*
+    const car = {
+    name:'Toyota',
+    year:2021
+    }
+
+    const action = {
+    type:'',
+    payload:''
+    }
 useReducer is used when there are more complex state logic to handle.
 
 core components of useReducer
